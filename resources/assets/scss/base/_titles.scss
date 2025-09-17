@@ -1,0 +1,32 @@
+@use "@scss/abstract/index";
+
+// ====================== HERO =========================
+
+.h1-title {
+  font-size: 25px;
+  font-weight: 500;
+  color: #111;
+  line-height: 110%;
+  margin-bottom: .5rem;
+  @include index.minMedia(800px) {
+    font-size: 35px;
+  }
+  @media (max-height: 450px) and (orientation: landscape) {
+    font-size: 35px;
+  }
+}
+
+.h2-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #111;
+  line-height: 110%;
+  margin-bottom: .5rem;
+  @include index.minMedia(800px) {
+    font-size: 30px;
+  }
+  @media (max-height: 450px) and (orientation: landscape) {
+    font-size: 30px;
+  }
+}
+
