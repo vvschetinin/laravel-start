@@ -140,3 +140,45 @@ php artisan make:controller PostController
 php artisan make:controller Admin/UserController
 
 ```
+
+### ГЕНЕРАЦИЯ КОМПОНЕНТОВ И ИХ УСТАНОВКА
+
+```bash
+# Создание компонентов
+php artisan make:component HeroSection
+php artisan make:component ServicesSection
+php artisan make:component CasesSection
+php artisan make:component TestimonialsSection
+php artisan make:component CtaSection
+```
+
+##### Пример структуры
+
+resources/views/
+├── components/
+│ ├── hero-section.blade.php
+│ ├── services-section.blade.php
+│ ├── cases-section.blade.php
+│ ├── testimonials-section.blade.php
+│ └── cta-section.blade.php
+├── pages/
+│ └── services/
+│ └── index.blade.php
+└── layouts/
+└── app.blade.php
+
+```bash
+# Создание в определенной папке
+php artisan make:component hero/HeroSectionMain
+```
+
+Это создаст:
+
+Класс: app/View/Components/Hero/HeroSectionMain.php
+Вьюху: resources/views/components/hero/hero-section-main.blade.php
+
+### Подключение на страницу
+
+<x-hero.hero-section-main />
+
+##### Это наиболее упрощенный вариант, возможности значительно шире
